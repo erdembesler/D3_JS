@@ -8,6 +8,9 @@ const Pokemon = (props) => {
         <Button onClick={() => props.history.push(`/curvedline`)}>
           CURVED LINE
         </Button>
+        <Button onClick={() => props.history.push(`/animatedbar`)}>
+          ANIMATED BAR
+        </Button>
       </div>
     </>
   );

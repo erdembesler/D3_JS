@@ -1,0 +1,24 @@
+svg {
+  background: #eee;
+  overflow-x: visible;
+  overflow-y: visible;
+  display: block;
+  width: 100%;
+}
+
+.Svg {
+  background: #eee;
+  overflow-x: visible;
+  overflow-y: visible;
+  display: block;
+  width: 100%;
+  /* overflow: scroll; */
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 50px;
+}
