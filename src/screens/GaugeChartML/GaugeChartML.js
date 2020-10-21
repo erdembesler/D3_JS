@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { select, arc, pie, interpolate } from "d3";
-import useResizeObserver from "./useResizeObserver";
+import useResizeObserver from "../../Utils/useResizeObserver";
 import ml5 from "ml5";
-import useInterval from "./useInterval";
+import useInterval from "../../Utils/useInterval";
 import "./GaugeChartML.css";
 
 let classifier;
@@ -93,7 +93,7 @@ const GaugeChart = (props) => {
       </h1>
 
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
-        <svg ref={svgRef}></svg>
+        <svg className={"svg"} ref={svgRef}></svg>
       </div>
 
       <button onClick={() => setShouldClassify(!shouldClassify)}>
