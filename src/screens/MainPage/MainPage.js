@@ -11,6 +11,9 @@ const Pokemon = (props) => {
         <Button onClick={() => props.history.push(`/animatedbar`)}>
           ANIMATED BAR
         </Button>
+        <Button onClick={() => props.history.push(`/gaugechartml`)}>
+          GAUGE CHARTML
+        </Button>
       </div>
     </>
   );
