@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 
 const Pokemon = (props) => {
@@ -19,6 +19,9 @@ const Pokemon = (props) => {
         </Button>
         <Button onClick={() => props.history.push(`/racingbarchart`)}>
           RACING BAR CHART
+        </Button>
+        <Button onClick={() => props.history.push(`/treechart`)}>
+          TREE CHART
         </Button>
       </div>
     </>
