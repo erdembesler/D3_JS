@@ -17,6 +17,9 @@ const Pokemon = (props) => {
         <Button onClick={() => props.history.push(`/bbtimeline`)}>
           BBTIMELINE
         </Button>
+        <Button onClick={() => props.history.push(`/racingbarchart`)}>
+          RACING BAR CHART
+        </Button>
       </div>
     </>
   );

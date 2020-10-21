@@ -4,6 +4,8 @@ import MainPage from "./screens/MainPage/MainPage";
 import AnimatedBar from "./screens/AnimatedBar/AnimatedBar";
 import GaugeChartML from "./screens/GaugeChartML/GaugeChartML";
 import BBTimeLine from "./screens/BBTimeLine/BBTimeLine";
+import RacingBarChart from "./screens/RacingBarChart/RacingBarChart";
+
 import { Route, Switch } from "react-router-dom";
 
 const App = () => (
@@ -12,6 +14,7 @@ const App = () => (
     <Route path="/gaugechartml" component={GaugeChartML} />
     <Route path="/bbtimeline" component={BBTimeLine} />
     <Route path="/curvedline" component={CurvedLine} />
+    <Route path="/racingbarchart" component={RacingBarChart} />
     <Route exact path="/" render={(props) => <MainPage {...props} />} />
   </Switch>
 );
