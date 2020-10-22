@@ -9,6 +9,7 @@ import TreeChart from "./screens/TreeChart/TreeChart";
 import GeoChart from "./screens/GeoChart/GeoChart";
 import BrushChart from "./screens/BrushChart/BrushChart";
 import StackedBarChart from "./screens/StackedBarChart/StackedBarChart";
+import ZoomableLineChart from "./screens/ZoomableLineChart/ZoomableLineChart";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -23,6 +24,7 @@ const App = () => (
     <Route path="/geochart" component={GeoChart} />
     <Route path="/brushchart" component={BrushChart} />
     <Route path="/stackedbarchart" component={StackedBarChart} />
+    <Route path="/zoomablelinechart" component={ZoomableLineChart} />
     <Route exact path="/" render={(props) => <MainPage {...props} />} />
   </Switch>
 );
