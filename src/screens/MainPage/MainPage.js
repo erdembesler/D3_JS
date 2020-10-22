@@ -26,6 +26,9 @@ const Pokemon = (props) => {
         <Button onClick={() => props.history.push(`/geochart`)}>
           GEO CHART
         </Button>
+        <Button onClick={() => props.history.push(`/brushchart`)}>
+          BRUSH CHART
+        </Button>
       </div>
     </>
   );
