@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { select, hierarchy, tree, linkHorizontal } from "d3";
 import useResizeObserver from "../../Utils/useResizeObserver";
+import ForceTreeChart from "./ForceTreeChart";
 
 function usePrevious(value) {
   const ref = useRef();
@@ -126,6 +127,8 @@ const TreeChart = () => {
 
   return (
     <>
+      <h2>Force tree chart</h2>
+      <ForceTreeChart data={data} />
       <h1>Animated Tree Chart</h1>
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg className={"Svg"} ref={svgRef}></svg>
