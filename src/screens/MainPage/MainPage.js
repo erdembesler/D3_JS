@@ -29,6 +29,9 @@ const Pokemon = (props) => {
         <Button onClick={() => props.history.push(`/brushchart`)}>
           BRUSH CHART
         </Button>
+        <Button onClick={() => props.history.push(`/stackedbarchart`)}>
+          STACKED BAR CHART
+        </Button>
       </div>
     </>
   );

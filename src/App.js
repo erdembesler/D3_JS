@@ -8,6 +8,7 @@ import RacingBarChart from "./screens/RacingBarChart/RacingBarChart";
 import TreeChart from "./screens/TreeChart/TreeChart";
 import GeoChart from "./screens/GeoChart/GeoChart";
 import BrushChart from "./screens/BrushChart/BrushChart";
+import StackedBarChart from "./screens/StackedBarChart/StackedBarChart";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -21,6 +22,7 @@ const App = () => (
     <Route path="/treechart" component={TreeChart} />
     <Route path="/geochart" component={GeoChart} />
     <Route path="/brushchart" component={BrushChart} />
+    <Route path="/stackedbarchart" component={StackedBarChart} />
     <Route exact path="/" render={(props) => <MainPage {...props} />} />
   </Switch>
 );
