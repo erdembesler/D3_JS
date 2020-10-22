@@ -6,6 +6,7 @@ import GaugeChartML from "./screens/GaugeChartML/GaugeChartML";
 import BBTimeLine from "./screens/BBTimeLine/BBTimeLine";
 import RacingBarChart from "./screens/RacingBarChart/RacingBarChart";
 import TreeChart from "./screens/TreeChart/TreeChart";
+import GeoChart from "./screens/GeoChart/GeoChart";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -17,6 +18,7 @@ const App = () => (
     <Route path="/curvedline" component={CurvedLine} />
     <Route path="/racingbarchart" component={RacingBarChart} />
     <Route path="/treechart" component={TreeChart} />
+    <Route path="/geochart" component={GeoChart} />
     <Route exact path="/" render={(props) => <MainPage {...props} />} />
   </Switch>
 );
