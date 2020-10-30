@@ -13,6 +13,7 @@ import {
 import useResizeObserver from "../../Utils/useResizeObserver";
 import usePrevious from "../../Utils/usePrevious";
 import BrushChartChild from "./BrushChartChild";
+import { Button } from "react-bootstrap";
 import "./BrushChart.css";
 
 /**
@@ -116,7 +117,9 @@ const BrushChart = () => {
         </svg>
       </div>
       <BrushChartChild data={data} selection={selection} />
-      <button onClick={onAddDataClick}>Add data</button>{" "}
+      <div style={{ textAlign: "center" }}>
+        <Button onClick={onAddDataClick}>Add data</Button>
+      </div>
     </React.Fragment>
   );
 };

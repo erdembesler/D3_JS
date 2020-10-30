@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { select, axisBottom, axisRight, scaleLinear, scaleBand } from "d3";
 import ResizeObserver from "resize-observer-polyfill";
-import "./AnimatedBar.css";
+import classes from "./AnimatedBar.css";
+import { Button } from "react-bootstrap";
 
 const useResizeObserver = (ref) => {
   const [dimensions, setDimensions] = useState(null);
@@ -105,20 +106,21 @@ const BarChart = (props) => {
       </div>
       <br />
       <br />
-      <br />
-      <br />
-      <button
-        className={"UpdateButton"}
-        onClick={() => setData(data.map((value) => value + 5))}
-      >
-        Update Data
-      </button>
-      <button
-        className={"FilterButton"}
-        onClick={() => setData(data.filter((value) => value < 35))}
-      >
-        Filter Data
-      </button>
+
+      <div style={{ textAlign: "center" }}>
+        <Button
+          className={classes.chartBtn}
+          onClick={() => setData(data.map((value) => value + 5))}
+        >
+          Update Data
+        </Button>
+        <Button
+          className={classes.chartBtn}
+          onClick={() => setData(data.filter((value) => value < 65))}
+        >
+          Filter Data
+        </Button>
+      </div>
     </>
   );
 };

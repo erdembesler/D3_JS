@@ -12,6 +12,8 @@ import {
 import useResizeObserver from "../../Utils/useResizeObserver";
 import StackedAreaChart from "./StackedAreaChart";
 import "./StackedBarChart.css";
+import { Button } from "react-bootstrap";
+
 const allKeys = ["🥑", "🍌", "🍆"];
 
 const colors = {
@@ -140,22 +142,23 @@ const StackedBarChart = () => {
           </div>
         ))}
       </div>
-
-      <button
-        onClick={() =>
-          setData([
-            ...data,
-            {
-              year: Math.max(...data.map((d) => d.year)) + 10,
-              "🥑": Math.round(Math.random() * 100),
-              "🍌": Math.round(Math.random() * 125),
-              "🍆": Math.round(Math.random() * 150),
-            },
-          ])
-        }
-      >
-        Add data
-      </button>
+      <div style={{ textAlign: "center" }}>
+        <Button
+          onClick={() =>
+            setData([
+              ...data,
+              {
+                year: Math.max(...data.map((d) => d.year)) + 10,
+                "🥑": Math.round(Math.random() * 100),
+                "🍌": Math.round(Math.random() * 125),
+                "🍆": Math.round(Math.random() * 150),
+              },
+            ])
+          }
+        >
+          Add data
+        </Button>
+      </div>
     </React.Fragment>
   );
 };

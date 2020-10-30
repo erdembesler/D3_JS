@@ -3,6 +3,8 @@ import { select, arc, pie, interpolate } from "d3";
 import useResizeObserver from "../../Utils/useResizeObserver";
 import ml5 from "ml5";
 import useInterval from "../../Utils/useInterval";
+import { Button } from "react-bootstrap";
+
 import "./GaugeChartML.css";
 
 let classifier;
@@ -95,17 +97,20 @@ const GaugeChart = (props) => {
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg className={"svg"} ref={svgRef}></svg>
       </div>
-
-      <button onClick={() => setShouldClassify(!shouldClassify)}>
-        {shouldClassify ? "Stop classifying" : "Start classifying"}
-      </button>
-      <video
-        className={"Video"}
-        ref={videoRef}
-        style={{ transform: "scale(-1, 1)" }}
-        width="300"
-        height="150"
-      />
+      <div style={{ textAlign: "center" }}>
+        <Button onClick={() => setShouldClassify(!shouldClassify)}>
+          {shouldClassify ? "Stop classifying" : "Start classifying"}
+        </Button>
+      </div>
+      <div style={{ marginBottom: "20px" }}>
+        <video
+          className={"Video"}
+          ref={videoRef}
+          style={{ transform: "scale(-1, 1)" }}
+          width="300"
+          height="150"
+        />
+      </div>
     </>
   );
 };

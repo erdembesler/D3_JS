@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { select, hierarchy, tree, linkHorizontal } from "d3";
 import useResizeObserver from "../../Utils/useResizeObserver";
 import ForceTreeChart from "./ForceTreeChart";
+import { Button } from "react-bootstrap";
 
 function usePrevious(value) {
   const ref = useRef();
@@ -133,9 +134,11 @@ const TreeChart = () => {
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg className={"Svg"} ref={svgRef}></svg>
       </div>
-      <button onClick={() => setData(initialData.children[0])}>
-        Update data
-      </button>
+      <div style={{ textAlign: "center" }}>
+        <Button onClick={() => setData(initialData.children[0])}>
+          Update data
+        </Button>
+      </div>
     </>
   );
 };

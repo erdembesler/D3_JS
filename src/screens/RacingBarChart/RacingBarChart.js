@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import { select, scaleBand, scaleLinear, max } from "d3";
 import useResizeObserver from "../../Utils/useResizeObserver";
 import useInterval from "../../Utils/useInterval";
+import { Button } from "react-bootstrap";
+
 const getRandomIndex = (array) => {
   return Math.floor(array.length * Math.random());
 };
@@ -120,9 +122,12 @@ const RacingBarChart = () => {
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg className={"svg"} ref={svgRef}></svg>
       </div>
-      <button onClick={() => setStart(!start)}>
-        {start ? "Stop the race" : "Start the race!"}
-      </button>
+      <div style={{ textAlign: "center", marginBottom: "15px" }}>
+        <Button onClick={() => setStart(!start)}>
+          {start ? "Stop the race" : "Start the race!"}
+        </Button>
+      </div>
+
       <p>Iteration: {iteration}</p>
     </>
   );

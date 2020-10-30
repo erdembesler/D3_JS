@@ -1,14 +1,13 @@
-.Svg .country:hover {
-  stroke: black;
-  stroke-width: 1px;
-  cursor: pointer;
-}
-
-.Svg {
+.svg {
   display: block;
   width: 100%;
   height: 300px;
   overflow: hidden;
+}
+.svg .country:hover {
+  stroke: black;
+  stroke-width: 1px;
+  cursor: pointer;
 }
 
 button {

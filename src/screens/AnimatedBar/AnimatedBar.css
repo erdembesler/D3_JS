@@ -22,3 +22,7 @@ svg {
   height: 100vh;
   padding: 0 50px;
 }
+
+.btn {
+  margin-right: 10px;
+}

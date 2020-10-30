@@ -12,6 +12,8 @@ import {
 } from "d3";
 import useResizeObserver from "../../Utils/useResizeObserver";
 import "./ZoomableLineChart.css";
+import { Button } from "react-bootstrap";
+
 /**
  * Component that renders a ZoomableLineChart
  */
@@ -112,11 +114,13 @@ function ZoomableLineChart({ id = "myZoomableLineChart" }) {
           <g className="y-axis" />
         </svg>
       </div>
-      <button
-        onClick={() => setData([...data, Math.round(Math.random() * 100)])}
-      >
-        Add data
-      </button>
+      <div style={{ textAlign: "center" }}>
+        <button
+          onClick={() => setData([...data, Math.round(Math.random() * 100)])}
+        >
+          Add data
+        </button>
+      </div>
     </React.Fragment>
   );
 }

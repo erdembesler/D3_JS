@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import classes from "./CurvedLine.css";
+import { Button } from "react-bootstrap";
 
 import {
   select,
@@ -20,16 +21,16 @@ const CurvedLine = (props) => {
 
     const xScale = scaleLinear()
       .domain([0, data.length - 1])
-      .range([0, 300]);
-    const yScale = scaleLinear().domain([0, 150]).range([150, 0]);
+      .range([0, 500]);
+    const yScale = scaleLinear().domain([0, 150]).range([300, 0]);
 
     const xAxis = axisBottom(xScale)
       .ticks(data.length)
       .tickFormat((index) => index + 1);
-    svg.select(".x-axis").style("transform", "translateY(149px)").call(xAxis);
+    svg.select(".x-axis").style("transform", "translateY(299px)").call(xAxis);
 
     const yAxis = axisRight(yScale);
-    svg.select(".y-axis").style("transform", "translateX(299px)").call(yAxis);
+    svg.select(".y-axis").style("transform", "translateX(499px)").call(yAxis);
 
     const myLine = line()
       .x((value, index) => xScale(index))
@@ -55,20 +56,21 @@ const CurvedLine = (props) => {
 
       <br />
       <br />
-      <br />
-      <br />
-      <button
-        className={"UpdateButton"}
-        onClick={() => setData(data.map((value) => value + 5))}
-      >
-        Update Data
-      </button>
-      <button
-        className={classes.FilterButton}
-        onClick={() => setData(data.filter((value) => value < 35))}
-      >
-        Filter Data
-      </button>
+
+      <div style={{ textAlign: "center" }}>
+        <Button
+          className={classes.chartBtn}
+          onClick={() => setData(data.map((value) => value + 5))}
+        >
+          Update Data
+        </Button>
+        <Button
+          className={classes.chartBtn}
+          onClick={() => setData(data.filter((value) => value < 65))}
+        >
+          Filter Data
+        </Button>
+      </div>
     </React.Fragment>
   );
 };

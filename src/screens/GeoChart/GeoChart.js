@@ -79,7 +79,7 @@ const GeoChart = () => {
     <>
       <h2>World Map with d3-geo</h2>
       <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
-        <svg className={"Svg"} ref={svgRef}></svg>
+        <svg className={"svg"} ref={svgRef}></svg>
       </div>{" "}
       <h2>Select property to highlight</h2>
       <select
