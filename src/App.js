@@ -5,6 +5,7 @@ import AnimatedBar from "./screens/AnimatedBar/AnimatedBar";
 import GaugeChartML from "./screens/GaugeChartML/GaugeChartML";
 import BBTimeLine from "./screens/BBTimeLine/BBTimeLine";
 import RacingBarChart from "./screens/RacingBarChart/RacingBarChart";
+import Paradox from "./screens/Paradox/Paradox";
 import TreeChart from "./screens/TreeChart/TreeChart";
 import GeoChart from "./screens/GeoChart/GeoChart";
 import BrushChart from "./screens/BrushChart/BrushChart";
@@ -20,6 +21,7 @@ const App = () => (
     <Route path="/bbtimeline" component={BBTimeLine} />
     <Route path="/curvedline" component={CurvedLine} />
     <Route path="/racingbarchart" component={RacingBarChart} />
+    <Route path="/paradox" component={Paradox} />
     <Route path="/treechart" component={TreeChart} />
     <Route path="/geochart" component={GeoChart} />
     <Route path="/brushchart" component={BrushChart} />

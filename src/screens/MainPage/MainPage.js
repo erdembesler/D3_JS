@@ -38,6 +38,13 @@ const Pokemon = (props) => {
         </Button>
         <Button
           className={"chartBtn"}
+          style={{ backgroundColor: "green" }}
+          onClick={() => props.history.push(`/paradox`)}
+        >
+          PARADOX
+        </Button>
+        <Button
+          className={"chartBtn"}
           onClick={() => props.history.push(`/treechart`)}
         >
           TREE CHART
